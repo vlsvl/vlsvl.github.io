@@ -1,0 +1,24 @@
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+// Base font size
+$baseFontSize: 16px;
+
+// Sizes for margin and padding
+$sizes: ("1": 1rem, "2": 2rem, "3": 3rem, "4": 4rem);
+
+// Theme colors
+$theme: (
+  "themeBg": #00000022,
+  "themeBgAccent": #0b0c0b,
+  "themeColor": #c1c9c1,
+  "themeInverse": #c5c6c8,
+  "accent": #08cc33,
+  "accentDark": #0d995f,
+);

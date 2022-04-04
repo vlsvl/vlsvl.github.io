@@ -1,0 +1,16 @@
+// Classes and rules for theme changed must write here.
+
+body {
+  background: map-get($theme, themeBg);
+  color: map-get($theme, themeColor);
+}
+
+.bg-accent {
+  background: map-get($theme, themeBgAccent);
+}
+.text-accent {
+  color: map-get($theme, themeAccent)
+}
+.text-inverse {
+  color: map-get($theme, themeInverse);
+}

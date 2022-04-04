@@ -1,19 +1,14 @@
-// import './../styles/style.scss'
+import Matrix from './matrix/matrix';
+import { handleMenuItem, handleScroll, handleMenuToggle } from './menuHandlers'
 
-console.log("Intresting");
-
-class Game {
-    name = 'Violin Charades'
-}
-const myGame = new Game()
-
-const p = document.createElement('p')
-p.textContent = `I like ${myGame.name}`
-
-// Create head node
-const heading = document.createElement('h1')
-heading.textContent = 'Intresting'
-
-const app = document.querySelector('#root')
-app.append(heading, p)
-
+(function init() {
+  // Menu
+  const items = document.querySelectorAll('.side-menu__item')
+  items.forEach(item => {
+    item.addEventListener('click', handleMenuItem)
+  })
+  const toggler = document.querySelectorAll('.sideToggler')
+  toggler.forEach(el => el.addEventListener('click', handleMenuToggle))
+  window.addEventListener('scroll', handleScroll)
+  window.addEventListener('load', new Matrix('matrix'))
+})()

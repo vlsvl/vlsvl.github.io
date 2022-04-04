@@ -1,0 +1,29 @@
+
+.section {
+  margin-bottom: 4rem;
+  position: relative;
+  padding: 1rem;
+  // background: inherit
+  &__blur {
+    text-align: center;
+    padding: 1rem;
+    background: #00000055;
+    backdrop-filter: blur(2px);
+    @include media-up(md) {
+      padding: 2rem;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: .5rem;
+    &::after {
+      content: '';
+      display: block;
+      border-bottom: 3px solid map-get($theme, 'accent');
+      position: relative
+    }
+  }
+}
+
+

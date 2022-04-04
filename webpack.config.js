@@ -108,12 +108,17 @@ module.exports = (env = {}, argv) => {
         }),
         new plugins.html({
           title: "Frontend Boilerplate",
-          template: "./html/template.html",
+          favicon: 'favicon.ico',
+          template: 'html/index.html',
           filename: "index.html",
+          inject: true,
           minify: {
+            removeComments: true,
+            collapseWhitespace: true,
             removeScriptTypeAttributes: true,
             removeStyleLinkTypeAttributes: true,
           },
+          title: 'Test title'
         }),
         // new plugins.clean(),
         // new webpack.HotModuleReplacementPlugin(),
@@ -124,19 +129,18 @@ module.exports = (env = {}, argv) => {
           "process.env.NODE_ENV": JSON.stringify(
             isProduction ? "production" : "development"
           ),
-        }),
+        })
       ];
 
       const production = [
         new plugins.clean(),
-        // new plugins.copy({
-        //   patterns: [
-        //     {
-        //       from: "data/**/*.json",
-        //       transform: (content) => minJSON(content.toString()),
-        //     },
-        //   ],
-        // }),
+        new plugins.copy({
+          patterns: [
+            {
+              from: "favicon.ico", to: "dist"
+            },
+          ],
+        }),
       ];
 
       const development = [
