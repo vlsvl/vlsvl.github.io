@@ -26,7 +26,7 @@ module.exports = (env = {}, argv) => {
     },
 
     output: {
-      path: path.resolve(__dirname, "./dist"),
+      path: path.resolve(__dirname, "./docs"),
       filename: "assets/[name].bundle.js",
     },
 
