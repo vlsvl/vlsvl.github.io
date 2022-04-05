@@ -1,28 +1,66 @@
+@import "./../init";
 
 .section {
+  width: 100%;
   margin-bottom: 4rem;
   position: relative;
-  padding: 1rem;
-  // background: inherit
-  &__blur {
-    text-align: center;
-    padding: 1rem;
-    background: #00000055;
-    backdrop-filter: blur(2px);
-    @include media-up(md) {
-      padding: 2rem;
-    }
+  border: 1px solid $colorAccentDarkest;
+  animation: borders-glow-out .5s ease-out;
+
+  @include media-up(lg) {
+    margin-bottom: 0;
   }
+
+  &:hover {
+    animation: borders-glow .5s ease-in-out;
+    box-shadow: 0 0 2px #fff, 0 0 5px $colorAccentDark, 0 0 8px $colorAccent;
+  }
+
+  &-active {
+    animation: borders-glow .5s ease-in-out;
+    box-shadow: 0 0 2px #fff, 0 0 5px $colorAccentDark, 0 0 8px $colorAccent;
+  }
+
+  &__blur {
+    padding: 2rem;
+    background: $colorBgT;
+    backdrop-filter: blur(2px);
+  }
+
   &__title {
-    text-align: center;
+    display: inline-block;
+    text-align: left;
     margin-bottom: 2rem;
     padding-bottom: .5rem;
+
+    @include media-up(lg) {
+      margin-bottom: 0;
+    }
+
     &::after {
       content: '';
       display: block;
-      border-bottom: 3px solid map-get($theme, 'accent');
+      border-bottom: 3px solid $colorAccent;
       position: relative
     }
+  }
+}
+
+@keyframes borders-glow {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 2px #fff, 0 0 5px $colorAccentDark, 0 0 8px $colorAccent;
+  }
+}
+
+@keyframes borders-glow-out {
+  0% {
+    box-shadow: 0 0 2px #fff, 0 0 5px $colorAccentDark, 0 0 8px $colorAccent;
+  }
+  100% {
+    box-shadow: none;
   }
 }
 

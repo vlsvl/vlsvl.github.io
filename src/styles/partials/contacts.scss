@@ -1,0 +1,27 @@
+.contacts {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  //svg {
+  //  fill: currentColor;
+  //}
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  color: $colorAccent;
+  &__icon {
+    height: 64px;
+    max-width: 84px;
+    fill: currentColor;
+    &-nofill {
+      fill: none;
+    }
+  }
+  &__title {
+    color: $colorAccent;
+  }
+}

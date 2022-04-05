@@ -2,16 +2,17 @@
 // __________________________________________________________
 // __________________________________________________________
 // __________________________________________________________
-@import "./variables";
-@import "./mixins/mixins";
-@import "./zeroing";
-@import "./font";
-@import "./helpers/helpers";
-@import "./shared";
-@import "./layout";
-@import "./typography";
+@import "init";
+@import "config/zeroing";
+@import "config/font";
+@import "partials/helpers/helpers";
+@import "config/shared";
+@import "config/layout";
+@import "config/typography";
 
 // __________________________________________________________
 @import "./partials/side";
 @import "./partials/section";
+@import "./partials/skills";
+@import "./partials/contacts";
 

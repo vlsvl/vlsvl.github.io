@@ -1,5 +1,5 @@
 import Matrix from './matrix/matrix';
-import { handleMenuItem, handleScroll, handleMenuToggle } from './menuHandlers'
+import { handleMenuItem, handleScroll, handleSectionHover, handleMenuLinkHover } from './menuHandlers'
 
 (function init() {
   // Menu
@@ -7,8 +7,8 @@ import { handleMenuItem, handleScroll, handleMenuToggle } from './menuHandlers'
   items.forEach(item => {
     item.addEventListener('click', handleMenuItem)
   })
-  const toggler = document.querySelectorAll('.sideToggler')
-  toggler.forEach(el => el.addEventListener('click', handleMenuToggle))
+  handleSectionHover()
+  handleMenuLinkHover()
   window.addEventListener('scroll', handleScroll)
   window.addEventListener('load', new Matrix('matrix'))
 })()

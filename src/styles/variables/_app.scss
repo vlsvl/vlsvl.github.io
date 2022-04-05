@@ -5,7 +5,8 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1400px,
+  xxxl: 1800px
 );
 // Base font size
 $baseFontSize: 16px;
@@ -14,11 +15,11 @@ $baseFontSize: 16px;
 $sizes: ("1": 1rem, "2": 2rem, "3": 3rem, "4": 4rem);
 
 // Theme colors
-$theme: (
-  "themeBg": #00000022,
-  "themeBgAccent": #0b0c0b,
-  "themeColor": #c1c9c1,
-  "themeInverse": #c5c6c8,
-  "accent": #08cc33,
-  "accentDark": #0d995f,
-);
+$colorBg: #0b0c0b;
+$colorBgT: #0b0c0b33;
+$colorBgT2: #0b0c0bdd;
+$colorText: #c1c9c1;
+$colorText2: #c5c6c8;
+$colorAccent: #11f6b8;
+$colorAccentDark: #0b9470;
+$colorAccentDarkest: #063b2d;
