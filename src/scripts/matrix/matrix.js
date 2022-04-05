@@ -57,7 +57,7 @@ class Symbol {
   }
   draw (context) {
     this.text = this.characters.charAt(Math.floor(Math.random()*this.characters.length))
-    context.fillStyle = '#0aff0a'
+    context.fillStyle = '#11f6b8'
     context.fillText(this.text, this.x * this.fontSize, this.y * this.fontSize)
     if (this.y * this.fontSize > this.canvasHeight && Math.random() > this.coef) {
       this.y = 0

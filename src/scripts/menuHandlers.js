@@ -20,7 +20,7 @@ function handleScroll(e) {
   }
 
   const oldActive = document.querySelector('.side-menu__item.side-menu__item-active');
-  if (oldActive != newActive) {
+  if (oldActive !== newActive) {
     if (oldActive) {
       oldActive.classList.remove('side-menu__item-active');
     }
@@ -28,15 +28,41 @@ function handleScroll(e) {
   }
 }
 
-function handleMenuToggle(e) {
-  const side = document.querySelector('.side');
-  if (!side.classList.contains('side__show')) {
-    side.classList.add('side__show')
-  } else {
-    side.classList.remove('side__show')
-  }
+function handleSectionHover() {
+  const items = document.querySelectorAll('.section')
+  items.forEach(item => {
+    item.addEventListener('mouseover', (e) => {
+      // Clear
+      document.querySelectorAll('.section')
+        .forEach(sec => sec.classList.remove('section-active'))
+      document.querySelectorAll('.side-menu__item')
+        .forEach(mi => mi.classList.remove('side-menu__item-active'))
+
+      e.currentTarget.classList.add('section-active')
+      const link = document.querySelector(`a[href="#${e.currentTarget.id}"]`)
+      if (link)
+        link.classList.add('side-menu__item-active')
+    })
+  })
+}
+function handleMenuLinkHover() {
+  const items = document.querySelectorAll('.side-menu__item')
+  items.forEach(item => {
+    item.addEventListener('mouseover', (e) => {
+      // Clear
+      document.querySelectorAll('.side-menu__item')
+        .forEach(i => i.classList.remove('side-menu__item-active'))
+      document.querySelectorAll('.section')
+        .forEach(si => si.classList.remove('section-active'))
+
+      e.currentTarget.classList.add('side-menu__item-active')
+      const sec = document.querySelector(e.currentTarget.hash)
+      if (sec)
+        sec.classList.add('section-active')
+    })
+  })
 }
 
 export {
-  handleMenuItem, handleScroll, handleMenuToggle
+  handleMenuItem, handleScroll, handleSectionHover, handleMenuLinkHover
 }

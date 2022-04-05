@@ -9,13 +9,14 @@
 </head>
 
 <body>
-  <main class="content">
-    <%= require('html-loader!./partials/side.html').default %>
-    <%= require('html-loader!./partials/about.html').default %>
-    <%= require('html-loader!./partials/works.html').default %>
-    <%= require('html-loader!./partials/technologies.html').default %>
-    <%= require('html-loader!./partials/contacts.html').default %>
-  </main>
+  <%= require('html-loader!./partials/side.html').default %>
+  <div id="sections">
+    <div class="sections-container">
+      <%= require('html-loader!./partials/skills.html').default %>
+      <%= require('html-loader!./partials/projects.html').default %>
+      <%= require('html-loader!./partials/contacts.html').default %>
+    </div>
+  </div>
   <canvas id="matrix"></canvas>
 </body>
 
