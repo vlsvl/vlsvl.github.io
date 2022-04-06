@@ -1,7 +1,6 @@
-## Started boilerplate for web development with webpack5.
+## Simple visit site
 
-Configured:
-* @babel for es6 support
-* Sass support for styling
+## Roadmap
 
-For use it just clone and delete .git folder.
+On next iterate
+1. [ ] Use vue3 and typescript

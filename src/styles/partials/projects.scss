@@ -1,0 +1,45 @@
+.projects__container {
+  @include media-up(md) {
+    max-width: 768px !important;
+    margin: 0 auto;
+  }
+}
+
+.splide__arrow {
+  display: none;
+  @include media-up(lg) {
+    display: flex;
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 250px;
+  border: 1px solid $colorAccentDarkest;
+  @include media-up(lg) {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 625px;
+  }
+  &__title {
+    color: $colorAccent;
+    margin-bottom: 1rem;
+  }
+  &__icon {
+    width: 90%;
+    height: auto;
+    @include media-up(lg) {
+      width: 256px;
+    }
+  }
+  &__info {
+
+  }
+  a {
+    color: $colorAccent;
+    text-decoration: underline;
+  }
+}

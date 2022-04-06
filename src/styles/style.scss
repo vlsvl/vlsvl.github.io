@@ -1,7 +1,3 @@
-
-// __________________________________________________________
-// __________________________________________________________
-// __________________________________________________________
 @import "init";
 @import "config/zeroing";
 @import "config/font";
@@ -10,9 +6,13 @@
 @import "config/layout";
 @import "config/typography";
 
+
+
 // __________________________________________________________
 @import "./partials/side";
 @import "./partials/section";
 @import "./partials/skills";
+@import "./partials/projects";
 @import "./partials/contacts";
+
 
