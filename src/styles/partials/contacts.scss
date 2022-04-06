@@ -2,9 +2,6 @@
   display: flex;
   flex-wrap:wrap;
   justify-content: center;
-  //svg {
-  //  fill: currentColor;
-  //}
 }
 .contact {
   display: flex;
@@ -14,8 +11,8 @@
   margin: 1rem;
   color: $colorAccent;
   &__icon {
-    height: 64px;
-    max-width: 84px;
+    height: 48px;
+    max-width: 48px;
     fill: currentColor;
     &-nofill {
       fill: none;

@@ -22,9 +22,12 @@
   }
 
   &__blur {
-    padding: 2rem;
+    padding: 1rem;
     background: $colorBgT;
     backdrop-filter: blur(2px);
+    @include media-up(lg) {
+      padding: 2rem;
+    }
   }
 
   &__title {
@@ -35,13 +38,10 @@
 
     @include media-up(lg) {
       margin-bottom: 0;
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      border-bottom: 3px solid $colorAccent;
-      position: relative
+      padding-bottom: 0;
+      position: absolute;
+      top: 20px;
+      left: 20px;
     }
   }
 }

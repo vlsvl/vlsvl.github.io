@@ -1,6 +1,13 @@
 import Matrix from './matrix/matrix';
 import { handleMenuItem, handleScroll, handleSectionHover, handleMenuLinkHover } from './menuHandlers'
 
+import '@splidejs/splide/css/sea-green';
+import Splide from '@splidejs/splide';
+
+let splide = new Splide( '.splide', {
+  type   : 'loop',
+}).mount();
+
 (function init() {
   // Menu
   const items = document.querySelectorAll('.side-menu__item')
