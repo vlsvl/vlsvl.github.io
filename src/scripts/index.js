@@ -6,6 +6,9 @@ import Splide from '@splidejs/splide';
 
 let splide = new Splide( '.splide', {
   type   : 'loop',
+  perPage: 1,
+  // autoWidth: true,
+  // padding: '1rem',
 }).mount();
 
 (function init() {
