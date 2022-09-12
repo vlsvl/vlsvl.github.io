@@ -45,6 +45,7 @@ function handleSectionHover() {
     })
   })
 }
+
 function handleMenuLinkHover() {
   const items = document.querySelectorAll('.side-menu__item')
   items.forEach(item => {
