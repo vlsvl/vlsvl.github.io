@@ -1,48 +1,37 @@
 {
-  "name": "frontend-boilerplate",
+  "name": "leonid-vilisov-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress --mode production",
-    "dev": "webpack-dev-server --progress --mode development"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/idle0x/frontend-boilerplate.git"
+    "url": "git+https://github.com/vlsvl/vlsvl.github.io"
   },
   "keywords": [],
-  "author": "",
+  "author": "Leonid Vilisov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/idle0x/frontend-boilerplate/issues"
+    "url": "https://github.com/vlsvl/vlsvl.github.io/issues"
   },
-  "homepage": "https://github.com/idle0x/frontend-boilerplate#readme",
+  "homepage": "https://github.com/vlsvl/vlsvl.github.io#readme",
   "devDependencies": {
-    "@babel/core": "^7.16.7",
-    "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/preset-env": "^7.16.8",
-    "babel-loader": "^8.2.3",
-    "browser-sync-webpack-plugin": "^2.3.0",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^10.2.0",
-    "css-loader": "^6.5.1",
-    "html-loader": "^3.1.0",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.4.6",
-    "node-sass": "^7.0.1",
-    "postcss-loader": "^6.2.1",
-    "sass-loader": "^12.4.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.65.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.3",
-    "webpackbar": "^5.0.2"
+    "axios": "^0.27.2",
+    "lodash": "^4.17.19",
+    "postcss": "^8.1.14",
+    "vite": "^3.2.0",
+    "@vitejs/plugin-vue": "^3.1.2"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.2",
-    "cssnano": "^5.0.15",
-    "glider-js": "^1.7.7"
+    "@iconify/vue": "^4.0.0",
+    "pinia": "^2.0.23",
+    "sass": "^1.55.0",
+    "vue": "^3.2.41",
+    "vue-loader": "^17.0.0",
+    "vue-router": "^4.1.5"
   }
 }
